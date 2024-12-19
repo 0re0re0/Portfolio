@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Javier Designs</h1>
+        <hr>
+        <!-- Menú de navegación con enlaces -->
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobreMi.html">Sobre mí</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <!-- Contenido principal de la página -->
+    <main>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <!-- Formulario de contacto que envía el contenido a mi correo -->
+            <form action="mailto:cardenas97vga@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Nombre y Apellidos</label>
+                <input type="text" id="name" name="name" placeholder="Escribe tu nombre y apellidos" required>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Escribe tu correo" required>
+
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <!-- Enlace para descargar el CV del autor -->
+            <a href="../public/download/CV  Javier Cardenas Perdomo  .pdf" download="CV_Javier_Cardenas"
+                class="btn-descargar">Descargar CV
+            </a>
+        </section>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; Todos los derechos reservados | Diseñado por Javier Cardenas Perdomo</p>
+    </footer>
+</body>
+
+</html>

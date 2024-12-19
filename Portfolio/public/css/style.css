@@ -1,0 +1,508 @@
+/* ================================== */
+/* Fondo y fuente general */
+/* ================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #c3ec52, #0ba29d);
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* ================================== */
+/* Encabezado */
+/* ================================== */
+header {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: #affaa5;
+    
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px 20px; 
+    margin: 20px auto; 
+    background-color: #8add85;
+    color: #333; 
+    border: 2px solid #000000; 
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 1.8em; 
+    max-width: 20%; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+h2:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+hr {
+    border: 1px solid #affaa5;
+    width: 100%;
+    margin: 20px 0; 
+}
+/* ================================== */
+/* Menú de navegación */
+/* ================================== */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #affaa5;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin: 0 15px;
+    padding: 8px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #00b34b;
+    border-radius: 5px;
+}
+
+/* ================================== */
+/* Secciones principales */
+/* ================================== */
+section {
+    margin-bottom: 20px;
+}
+
+/* ================================== */
+/* Inicio*/
+/* ================================== */
+.inicio-presentacion {
+    border: 2px solid black; 
+    padding: 20px; 
+    border-radius: 10px;
+    max-width: 80%; 
+    margin: 0 auto; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.inicio-presentacion:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#inicio p {
+    text-align: center;
+}
+
+.ImagenBienvenida {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%;
+    margin: 40px auto; 
+    display: block; 
+    object-fit: cover;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.ImagenBienvenida:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* ================================== */
+/* Sobre Mi*/
+/* ================================== */
+#sobreMi img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    margin: 30px auto; 
+    display: block; 
+    object-fit: cover;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+#sobreMi img:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+#sobreMi {
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+    max-width: 60%; 
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+
+.sobreMi-contenido {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px; 
+    border: 2px solid black; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.sobreMi-contenido:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.sobreMi-contenido ul {
+    list-style-type: disc;
+    margin: 10px 0 20px 20px;
+}
+
+.sobreMi-contenido p {
+    margin-bottom: 15px;
+}
+
+.sobreMi-contenido strong {
+    color: #276047;
+}
+
+/* ================================== */
+/* Portafolio */
+/* ================================== */
+#portfolio {
+    text-align: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 40px; 
+    margin-bottom: 20px;
+    margin-left: auto; 
+    margin-right: auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+    border-radius: 8px;
+    padding: 20px;
+    border: 2px solid black;
+    max-width: 50%; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.portfolio-item .image-container {
+    flex: 0 0 120px; 
+    margin-right: 20px; 
+}
+
+.portfolio-item .image-container img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item .text-container h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.portfolio-item .text-container p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.project {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 300px; 
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* ================================== */
+/* Formulario de contacto */
+/* ================================== */
+form {
+    position: relative; 
+    background-color: transparent; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1); 
+    border-radius: 8px; 
+    border: 2px solid black;
+    max-width: 600px;
+    margin: 20px auto; 
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 2px solid black;
+    
+}
+
+form input[type="text"], form input[type="email"], form textarea[id="message"] {
+    background-color: #affaa5;
+    border: 2px solid black;
+}
+
+form button {
+    padding: 5px 40px;
+    margin: 20px auto; 
+    font-size: 16px;
+    border: 2px solid black; 
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #affaa5; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+form button:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+form button:focus {
+    outline: none; 
+}
+
+.btn-descargar {
+    padding: 10px 20px;
+    margin: 20px auto; 
+    font-size: 16px;
+    border: 2px solid black;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #affaa5; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    text-align: center; 
+    color: black; 
+    text-decoration: none;
+    max-width: 200px;
+    min-width: 120px;
+}
+
+.btn-descargar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+.btn-descargar:focus {
+    outline: none; 
+}
+/* ================================== */
+/* Footer */
+/* ================================== */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: #affaa5;
+    border-top: 2px solid #c3ec52;
+    margin-top: auto;
+}
+
+/* ================================== */
+/* Iconos lenguajes */
+/* ================================== */
+.inicio-contenedor {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 30px; 
+}
+
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 20px; 
+    flex-wrap: wrap;
+}
+
+.skills-icons i {
+    font-size: 40px; 
+    color: #333; 
+    transition: transform 0.3s ease;
+}
+
+.skills-icons i:hover {
+    transform: scale(1.1); 
+    color: #2df06e; 
+}
+/* ================================== */
+/* Media Queries */
+/* ================================== */
+
+/* Teléfonos (pantallas pequeñas) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        max-width: 80%;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        padding: 6px;
+        margin: 0 5px;
+    }
+
+    .ImagenBienvenida {
+        width: 150px;
+        height: 150px;
+    }
+
+    .inicio-presentacion {
+        max-width: 95%;
+    }
+
+    .portfolio-item {
+        max-width: 90%;
+    }
+
+    form button, .btn-descargar {
+        max-width: 90%;
+    }
+}
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        max-width: 60%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 1em;
+        padding: 6px;
+        margin: 0 10px;
+    }
+
+    .ImagenBienvenida {
+        width: 200px;
+        height: 200px;
+    }
+
+    .inicio-presentacion {
+        max-width: 90%;
+    }
+
+    .portfolio-item {
+        max-width: 80%;
+    }
+}
+
+/* Escritorios grandes */
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav a {
+        font-size: 1.1em;
+        padding: 8px;
+    }
+
+    .portfolio-item {
+        max-width: 50%;
+    }
+}
