@@ -1,0 +1,32 @@
+---
+const softSkills = [
+  {
+    title: "Trabajo en equipo",
+    description:
+      "Mi experiencia laboral en diferentes sectores me ha enseñado que el éxito de cualquier proyecto depende de un buen trabajo en equipo. Valoro la importancia de escuchar activamente, compartir conocimientos y mantener una actitud colaborativa. Ahora, como desarrollador, aplico estos principios para crear un ambiente de trabajo positivo y productivo.",
+  },
+  {
+    title: "Adaptabilidad",
+    description:
+      "Como desarrollador junior, me emociona enfrentarme a nuevos retos y tecnologías. Disfruto saliendo de mi zona de confort y adaptándome a diferentes situaciones. Esta mentalidad me ha permitido aprender rápidamente y mantenerme al día con las últimas tendencias en desarrollo web.",
+  },
+];
+---
+
+<section id="skills" class="skills-section">
+  <h2 class="section-title">
+    <i class="fas fa-feather-alt"></i>
+    Soft Skills
+  </h2>
+
+  <div class="skills-grid">
+    {
+      softSkills.map(({ title, description }) => (
+        <div class="skill-card">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

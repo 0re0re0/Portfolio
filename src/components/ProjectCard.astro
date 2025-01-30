@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  technologies: Array<{ name: string; icon: string }>;
+  repoUrl?: string;
+}
+
+const { title, description, image, technologies, repoUrl } = Astro.props;
+---
+
+<div class="project-card">
+  <h2 class="project-title">{title}</h2>
+
+  <div class="project-content">
+    <p class="project-description">{description}</p>
+
+    <div class="tech-tags">
+      {
+        technologies.map((tech) => (
+          <span class="tech-tag">
+            <i class={tech.icon} />
+            {tech.name}
+          </span>
+        ))
+      }
+    </div>
+
+    <div class="project-actions">
+      <a
+        href={repoUrl}
+        class={`action-button repo ${!repoUrl ? "disabled" : ""}`}
+        style={!repoUrl ? "text-decoration: line-through;" : ""}
+      >
+        <i class="fab fa-github"></i> Ver repositorio
+      </a>
+    </div>
+  </div>
+
+  <div class="project-media">
+    <div class="project-preview">
+      <img src={image} alt={`Imagen ${title}`} />
+    </div>
+  </div>
+</div>

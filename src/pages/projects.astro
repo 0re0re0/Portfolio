@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const projects = [
+  {
+    title: "Gestor de Usuarios",
+    description:
+      "Sistema de gestión de usuarios con autenticación segura y monitoreo de actividad en tiempo real. Incluye registro con validación de datos, control de intentos de inicio de sesión, seguimiento de sesiones activas y panel administrativo para gestionar usuarios. Permite cargar fotos de perfil y mantiene un registro detallado de la actividad de cada usuario.",
+    image: "/images/updev.png",
+    technologies: [
+      { name: "HTML", icon: "fab fa-html5" },
+      { name: "CSS", icon: "fab fa-css3-alt" },
+      { name: "JavaScript", icon: "fab fa-js" },
+      { name: "Node.js", icon: "fab fa-node-js" },
+    ],
+  },
+  {
+    title: "EventFlex",
+    description:
+      "Sistema integral de gestión de eventos que permite crear, organizar y controlar eventos de manera eficiente. Incluye un panel de administración intuitivo, sistema de registro seguro con validación en tiempo real, y un buscador con filtros para una mejor organización y seguimiento de tus eventos.",
+    image: "/images/eventflex.png",
+    technologies: [
+      { name: "HTML", icon: "fab fa-html5" },
+      { name: "CSS", icon: "fab fa-css3-alt" },
+      { name: "JavaScript", icon: "fab fa-js" },
+    ],
+    repoUrl: "https://github.com/0re0re0/Gestor-de-Eventos-",
+  },
+];
+---
+
+<Layout title="Javier | Proyectos">
+  <Header />
+  <main class="projects-section">
+    {
+      projects.map((project) => (
+        <div class="project-wrapper">
+          <ProjectCard {...project} />
+        </div>
+      ))
+    }
+  </main>
+</Layout>
