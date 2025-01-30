@@ -2,7 +2,7 @@
 
 # Bienvenido a [mi Portfolio](https://portfolio-otep.onrender.com/)
 
-¡Hola! Soy Javier, un desarrollador junior apasionado por aprender y mejorar mis habilidades en desarrollo web. Este portfolio está desarrollado únicamente con **HTML** y **CSS**.
+¡Hola! Soy Javier, un desarrollador junior apasionado por aprender y mejorar mis habilidades en desarrollo web. Este portfolio está desarrollado con **ASTRO** **HTML** y **CSS**.
 
 ## Sobre el Portfolio
 
