@@ -1,12 +1,15 @@
 ![Screenshot of Portfolio](./public/images/Screenshot.png)
 
-# Bienvenido a [mi Portfolio](https://portfolio-otep.onrender.com/)
+# Bienvenido a [mi Portfolio](https://portfoliojaviercp.netlify.app/)
 
-¡Hola! Soy Javier, un desarrollador junior apasionado por aprender y mejorar mis habilidades en desarrollo web. Este portfolio está desarrollado con **ASTRO** **HTML** y **CSS**.
+¡Hola! Soy Javier, un desarrollador junior apasionado por aprender y mejorar mis habilidades en desarrollo web.<br><br> 
+Este portfolio está desarrollado con **ASTRO**, **HTML**, **CSS** y **JavaScript**.
 
 ## Sobre el Portfolio
 
-Este proyecto es una representación de mis habilidades actuales y mi progreso en el mundo del desarrollo web. Estoy constantemente buscando nuevas oportunidades para aprender y crecer en este campo.
+Este proyecto es una representación de mis habilidades actuales y mi progreso en el mundo del desarrollo web.<br>
+Esta version de portfolio ha sido migrada a Astro, la original estaba basada unicamente en HTML y CSS.<br>
+Estoy constantemente buscando nuevas oportunidades para aprender y crecer como desarrollador.<br>
 
 ### Inspiración
 
