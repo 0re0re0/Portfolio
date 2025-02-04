@@ -254,8 +254,8 @@ h2 {
 
 .tech-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
+    flex-wrap: nowwrap;
+    gap: 14px;
     margin-top: 30px;
 }
 
