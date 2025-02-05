@@ -238,7 +238,21 @@
     .tech-tag i {
         font-size: 16px;
     }
+
+    .project-actions {
+        display: flex;
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .action-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        min-width: 120px;
+    }
 }
+
+
 
 /* Small Screens (Mobile) */
 @media (max-width: 480px) {
@@ -294,9 +308,19 @@
 
     /* Projects */
     .projects-section {
-        padding-top: 80px;
+        gap: 8px;
+        padding: 0 8px;
     }
 
+    .action-button {
+        font-size: 12px;
+        padding: 8px 12px;
+        min-width: 100px;
+    }
+
+    .action-button i {
+        margin-right: 4px;
+    }
     .project-title {
         font-size: 28px;
     }
@@ -356,6 +380,16 @@
 
     .tech-tags {
         gap: 12px;
+    }
+    .project-actions {
+        gap: 6px;
+        padding: 0 4px;
+    }
+
+    .action-button {
+        font-size: 11px;
+        padding: 6px 8px;
+        min-width: 90px;
     }
 }
 

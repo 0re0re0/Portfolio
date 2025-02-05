@@ -5,9 +5,11 @@ interface Props {
   image: string;
   technologies: Array<{ name: string; icon: string }>;
   repoUrl?: string;
+  demoUrl?: string;
 }
 
-const { title, description, image, technologies, repoUrl } = Astro.props;
+const { title, description, image, technologies, repoUrl, demoUrl } =
+  Astro.props;
 ---
 
 <div class="project-card">
@@ -34,6 +36,13 @@ const { title, description, image, technologies, repoUrl } = Astro.props;
         style={!repoUrl ? "text-decoration: line-through;" : ""}
       >
         <i class="fab fa-github"></i> Ver repositorio
+      </a>
+      <a
+        href={demoUrl}
+        class={`action-button demo ${!demoUrl ? "disabled" : ""}`}
+        style={!demoUrl ? "text-decoration: line-through;" : ""}
+      >
+        <i class="fas fa-external-link-alt"></i> ¡Pruébalo!
       </a>
     </div>
   </div>
