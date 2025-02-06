@@ -1,16 +1,16 @@
 ---
 const currentPath = Astro.url.pathname;
+const isHome = currentPath === "/" || currentPath === "";
+const isProjects = currentPath.includes("projects");
 ---
 
 <nav class="navbar">
   <ul class="nav-links">
     <li>
-      <a href="/" class={currentPath === "/" ? "active" : ""}>Sobre Mi</a>
+      <a href="/" class={isHome ? "active" : ""}>Sobre Mi</a>
     </li>
     <li>
-      <a href="/projects" class={currentPath === "/projects" ? "active" : ""}
-        >Proyectos
-      </a>
+      <a href="/projects/" class={isProjects ? "active" : ""}>Proyectos</a>
     </li>
   </ul>
 </nav>
