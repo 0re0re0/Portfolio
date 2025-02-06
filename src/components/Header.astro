@@ -1,15 +1,14 @@
 ---
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);
+const currentPath = Astro.url.pathname;
 ---
 
 <nav class="navbar">
   <ul class="nav-links">
     <li>
-      <a href="/" class={currentPath === "" ? "active" : ""}>Sobre Mi</a>
+      <a href="/" class={currentPath === "/" ? "active" : ""}>Sobre Mi</a>
     </li>
     <li>
-      <a href="/projects" class={currentPath === "projects" ? "active" : ""}
+      <a href="/projects" class={currentPath === "/projects" ? "active" : ""}
         >Proyectos
       </a>
     </li>
