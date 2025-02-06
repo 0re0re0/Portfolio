@@ -6,15 +6,33 @@ interface Props {
   technologies: Array<{ name: string; icon: string }>;
   repoUrl?: string;
   demoUrl?: string;
+  inDevelopment?: boolean;
 }
 
-const { title, description, image, technologies, repoUrl, demoUrl } =
-  Astro.props;
+const {
+  title,
+  description,
+  image,
+  technologies,
+  repoUrl,
+  demoUrl,
+  inDevelopment,
+} = Astro.props;
 ---
 
 <div class="project-card">
-  <h2 class="project-title">{title}</h2>
-
+  <div class="project-header">
+    <h2 class="project-title">{title}</h2>
+    {
+      inDevelopment && (
+        <div class="status-badge">
+          <h4 class="development-status">
+            <i class="fas fa-tools" /> En desarrollo activo
+          </h4>
+        </div>
+      )
+    }
+  </div>
   <div class="project-content">
     <p class="project-description">{description}</p>
 

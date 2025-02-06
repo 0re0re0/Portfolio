@@ -310,6 +310,8 @@
     .projects-section {
         gap: 8px;
         padding: 0 8px;
+        padding-top: 120px;
+        margin-top: 20px;
     }
 
     .action-button {
