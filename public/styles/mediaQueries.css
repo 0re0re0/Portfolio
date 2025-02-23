@@ -1,22 +1,4 @@
 /* Large Screens (Laptops & Desktops) */
-
-@media (min-width: 1025px) {
-    .tech-grid {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        gap: 8px;
-        margin-top: 30px;
-        padding: 0 20px;
-    }
-
-    .tech-item {
-        width: 80px;
-        max-width: 80px;
-        margin: 0;
-    }
-}
-
 @media (max-width: 1024px) {
     /* Layout & Sections */
     .hero-section, .stack-section, .skills-section, .projects-section {

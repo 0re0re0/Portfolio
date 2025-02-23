@@ -262,36 +262,36 @@ h2 {
 
 .tech-row {
     display: flex;
-    justify-content: space-between;
-    gap: 128px;
+    flex-direction: column;
+    gap: 48px;
 }
 
 .category {
-    flex: 1;
-    padding-right: 32px;
+    width: 100%;
 }
 
 .tech-categories h3 {
-    margin-bottom: 24px;
+    margin-bottom: 42px;
     font-size: 24px;
     color: var(--primary-color);
     opacity: 0.8;
 }
 
 .tech-grid {
-    display: flex;
-    flex-wrap: nowwrap;
-    gap: 14px;
-    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 80px); 
+    gap: 22px; 
+    margin-bottom: 24px;
+    max-width: 600px;
 }
 
 .tech-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    width: 100px;
+    gap: 4px;
     color: var(--text-color);
+    text-align: center;
 }
 
 .tech-item i {

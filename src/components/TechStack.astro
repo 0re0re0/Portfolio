@@ -7,6 +7,12 @@ const technologies = [
   { name: "NPM", icon: "fab fa-npm" },
 ];
 
+const learning = [
+  { name: "Astro", icon: "fas fa-rocket" },
+  { name: "React", icon: "fab fa-react" },
+  { name: "TypeScript", icon: "fab fa-js" },
+];
+
 const tools = [
   { name: "Git", icon: "fab fa-git-alt" },
   { name: "GitHub", icon: "fab fa-github" },
@@ -21,32 +27,39 @@ const tools = [
     Tech Skills
   </h2>
   <div class="tech-categories">
-    <div class="tech-row">
-      <div class="category">
-        <h3>Tecnologías</h3>
-        <div class="tech-grid">
-          {
-            technologies.map((tech) => (
-              <div class="tech-item">
-                <i class={tech.icon} />
-                {tech.name}
-              </div>
-            ))
-          }
-        </div>
+    <div class="category">
+      <h3>Tecnologías</h3>
+      <div class="tech-grid">
+        {
+          technologies.map((tech) => (
+            <div class="tech-item">
+              <i class={tech.icon} />
+              {tech.name}
+            </div>
+          ))
+        }
       </div>
-      <div class="category">
-        <h3>Herramientas</h3>
-        <div class="tech-grid">
-          {
-            tools.map((tool) => (
-              <div class="tech-item">
-                <i class={tool.icon} />
-                {tool.name}
-              </div>
-            ))
-          }
-        </div>
+      <h3 style="margin-top: 32px;">Aprendiendo</h3>
+      <div class="tech-grid">
+        {
+          learning.map((tech) => (
+            <div class="tech-item">
+              <i class={tech.icon} />
+              {tech.name}
+            </div>
+          ))
+        }
+      </div>
+      <h3 style="margin-top: 32px;">Herramientas</h3>
+      <div class="tech-grid">
+        {
+          tools.map((tool) => (
+            <div class="tech-item">
+              <i class={tool.icon} />
+              {tool.name}
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
