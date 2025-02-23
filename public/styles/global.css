@@ -40,7 +40,7 @@ body {
     padding: 26px 58px;
     background-color: var(--background-color);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(12, 251, 155, 0.213);
+    border: 2px solid black;
     transition: all 0.3s ease;
 }
 
@@ -84,7 +84,6 @@ body {
 
 .social-button:hover,
 .btn-descargar:hover {
-    background-color: var(--primary-color);
     transform: translateY(-2px);
 }
 
@@ -298,6 +297,7 @@ h2 {
 .tech-item i {
     font-size: 48px;
     color: var(--primary-color);
+    
 }
 
 /* Skills Section */
@@ -311,6 +311,7 @@ h2 {
     padding: 26px;
     background-color: var(--card-color);
     border-radius: 8px;
+    border: 2px solid black;
     transition: transform 0.3s ease;
 }
 
@@ -345,16 +346,13 @@ h2 {
 }
 
 .project-card {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    grid-template-areas: 
-        "title title"
-        "content media";
+    display: flex;
+    flex-direction: column;
     gap: 24px;
-    align-items: start;
     padding: 24px;
     background: var(--card-color);
     border-radius: 8px;
+    border: 2px solid black;
 }
 
 .project-title {
@@ -365,37 +363,32 @@ h2 {
 }
 
 .project-content {
-    grid-area: content;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
 }
 
 .project-description {
-    max-width: 90%;
-    margin: 0;
-    padding-left: 16px;
-    font-size: 14px;
-    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
     color: var(--text-color);
-    text-align: left;
-    word-spacing: 0;
-    letter-spacing: normal;
-    white-space: normal;
 }
 
 .project-media {
-    grid-area: media;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: -40px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
 }
 
 .project-preview {
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
+    border: 2px solid black;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -407,8 +400,10 @@ h2 {
 
 .tech-tags {
     display: flex;
-    gap: 16px;
-    margin-top: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 16px 0;
 }
 
 .tech-tag {
@@ -426,10 +421,9 @@ h2 {
 }
 
 .project-actions {
-    margin-top: 20px;
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    justify-content: center;
+    gap: 24px;
 }
 
 .status-badge {
@@ -437,11 +431,10 @@ h2 {
     border-radius: 6px;
     padding: 0.5rem 1rem;
     display: inline-block;
-    border: 1px solid rgba(255, 152, 0, 0.5);
+    border: 1px solid var(--secondary-color);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(4px);
-    margin-top: -0.5rem;
-    margin-bottom: 1rem;
+    margin: 0;
   }
 
   .development-status {

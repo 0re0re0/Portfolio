@@ -22,17 +22,26 @@ const {
 
 <div class="project-card">
   <div class="project-header">
-    <h2 class="project-title">{title}</h2>
-    {
-      inDevelopment && (
-        <div class="status-badge">
-          <h4 class="development-status">
-            <i class="fas fa-tools" /> En desarrollo activo
-          </h4>
-        </div>
-      )
-    }
+    <div class="title-wrapper">
+      <h2 class="project-title">{title}</h2>
+      {
+        inDevelopment && (
+          <div class="status-badge">
+            <h4 class="development-status">
+              <i class="fas fa-tools" /> En desarrollo activo
+            </h4>
+          </div>
+        )
+      }
+    </div>
   </div>
+
+  <div class="project-media">
+    <div class="project-preview">
+      <img src={image} alt={`Imagen ${title}`} />
+    </div>
+  </div>
+
   <div class="project-content">
     <p class="project-description">{description}</p>
 
@@ -53,7 +62,7 @@ const {
         class={`action-button repo ${!repoUrl ? "disabled" : ""}`}
         style={!repoUrl ? "text-decoration: line-through;" : ""}
       >
-        <i class="fab fa-github"></i> Ver repositorio
+        <i class="fab fa-github"></i> Repositorio
       </a>
       <a
         href={demoUrl}
@@ -64,14 +73,49 @@ const {
       </a>
     </div>
   </div>
-
-  <div class="project-media">
-    <div class="project-preview">
-      <img src={image} alt={`Imagen ${title}`} />
-    </div>
-  </div>
 </div>
+
 <style>
+  .project-header {
+    width: 100%;
+  }
+
+  .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    margin: 0;
+  }
+
+  .tech-tag img {
+    width: 25px;
+    height: 25px;
+  }
+
+  @media (max-width: 768px) {
+    .title-wrapper {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+    }
+
+    .project-title {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-title {
+      font-size: 20px;
+    }
+  }
+
   .tech-tag img {
     width: 25px;
     height: 25px;
