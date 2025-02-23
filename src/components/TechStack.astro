@@ -1,23 +1,23 @@
 ---
 const technologies = [
-  { name: "HTML", icon: "fab fa-html5" },
-  { name: "CSS", icon: "fab fa-css3-alt" },
-  { name: "JS", icon: "fab fa-js" },
-  { name: "Node.js", icon: "fab fa-node-js" },
-  { name: "NPM", icon: "fab fa-npm" },
+  { name: "HTML", icon: "https://skillicons.dev/icons?i=html" },
+  { name: "CSS", icon: "https://skillicons.dev/icons?i=css" },
+  { name: "JS", icon: "https://skillicons.dev/icons?i=js" },
+  { name: "NodeJS", icon: "https://skillicons.dev/icons?i=nodejs" },
+  { name: "NPM", icon: "https://skillicons.dev/icons?i=npm" },
 ];
 
 const learning = [
-  { name: "Astro", icon: "fas fa-rocket" },
-  { name: "React", icon: "fab fa-react" },
-  { name: "TypeScript", icon: "fab fa-js" },
+  { name: "Astro", icon: "https://skillicons.dev/icons?i=astro" },
+  { name: "React", icon: "https://skillicons.dev/icons?i=react" },
+  { name: "TypeScript", icon: "https://skillicons.dev/icons?i=ts" },
 ];
 
 const tools = [
-  { name: "Git", icon: "fab fa-git-alt" },
-  { name: "GitHub", icon: "fab fa-github" },
-  { name: "Docker", icon: "fab fa-docker" },
-  { name: "MongoDB", icon: "fas fa-database" },
+  { name: "Git", icon: "https://skillicons.dev/icons?i=git" },
+  { name: "GitHub", icon: "https://skillicons.dev/icons?i=github" },
+  { name: "Docker", icon: "https://skillicons.dev/icons?i=docker" },
+  { name: "MongoDB", icon: "https://skillicons.dev/icons?i=mongodb" },
 ];
 ---
 
@@ -33,7 +33,7 @@ const tools = [
         {
           technologies.map((tech) => (
             <div class="tech-item">
-              <i class={tech.icon} />
+              <img src={tech.icon} alt={tech.name} />
               {tech.name}
             </div>
           ))
@@ -44,7 +44,7 @@ const tools = [
         {
           learning.map((tech) => (
             <div class="tech-item">
-              <i class={tech.icon} />
+              <img src={tech.icon} alt={tech.name} />
               {tech.name}
             </div>
           ))
@@ -55,7 +55,7 @@ const tools = [
         {
           tools.map((tool) => (
             <div class="tech-item">
-              <i class={tool.icon} />
+              <img src={tool.icon} alt={tool.name} />
               {tool.name}
             </div>
           ))

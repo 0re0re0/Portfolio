@@ -40,7 +40,7 @@ const {
       {
         technologies.map((tech) => (
           <span class="tech-tag">
-            <i class={tech.icon} />
+            <img src={tech.icon} alt={tech.name} />
             {tech.name}
           </span>
         ))
@@ -71,3 +71,9 @@ const {
     </div>
   </div>
 </div>
+<style>
+  .tech-tag img {
+    width: 25px;
+    height: 25px;
+  }
+</style>

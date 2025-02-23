@@ -1,8 +1,9 @@
 /* Variables y Reset */
 :root {
-    --primary-color: rgba(12, 251, 155, 0.6);
+    --primary-color: rgba(21, 249, 150, 0.774);
+    --secondary-color: rgba(255, 152, 0, 0.9);
     --text-color: #ffffff;
-    --background-color: #060F11;
+    --background-color:     #070e0e;
     --card-color: #0d1719;
 }
 
@@ -381,7 +382,6 @@ h2 {
     word-spacing: 0;
     letter-spacing: normal;
     white-space: normal;
-    border-left: 2px solid var(--primary-color);
 }
 
 .project-media {
@@ -417,12 +417,12 @@ h2 {
     align-items: center;
     gap: 6px;
     min-width: 80px;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .tech-tag i {
     font-size: 18px;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .project-actions {
