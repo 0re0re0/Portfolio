@@ -20,7 +20,7 @@ Estoy constantemente buscando nuevas oportunidades para aprender y crecer como d
 
 Este proyecto está bajo la Licencia MIT Si decides usar este proyecto, por favor, mencióname.
 
-## 👨‍💻 Autor
+##  Autor
 
 Javier Cardenas Perdomo
 
