@@ -11,7 +11,7 @@ tags:
   - Css
   - Javascript
   - Nodejs
-  - MongoDB
+  - Mongo DB
 demoUrl: https://usercontrol.onrender.com/
 repoUrl: https://github.com/0re0re0/UserControl
 ---
