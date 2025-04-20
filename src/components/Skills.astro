@@ -1,0 +1,115 @@
+---
+import SkillsIcon from './icons/SkillsIcon.astro';
+import SectionTitle from './section-title/SectionTitle.astro';
+
+const technologies = [
+  { name: "Astro", icon: "https://skillicons.dev/icons?i=astro" },
+  { name: "HTML", icon: "https://skillicons.dev/icons?i=html" },
+  { name: "CSS", icon: "https://skillicons.dev/icons?i=css" },
+  { name: "JS", icon: "https://skillicons.dev/icons?i=js" },
+  { name: "NodeJS", icon: "https://skillicons.dev/icons?i=nodejs" },
+];
+
+const learning = [
+  { name: "Swift", icon: "https://skillicons.dev/icons?i=swift" },
+];
+
+const tools = [
+  { name: "Git", icon: "https://skillicons.dev/icons?i=git" },
+  { name: "GitHub", icon: "https://skillicons.dev/icons?i=github" },
+  { name: "Docker", icon: "https://skillicons.dev/icons?i=docker" },
+  { name: "MongoDB", icon: "https://skillicons.dev/icons?i=mongodb" },
+];
+---
+
+<section class="skills wrapper" id="skills">
+  <SectionTitle title="Tech Stack">
+    <SkillsIcon class="section-icon" />
+  </SectionTitle>
+
+  <div class="skills__content">
+    <h3 class="skills__subtitle smoke">Tecnologías</h3>
+    <ul class="skills__ul">
+      {
+        technologies.map((tech) => (
+          <li class="skills__li">
+            <img src={tech.icon} alt={tech.name} class="skills__icon" />
+            {tech.name}
+          </li>
+        ))
+      }
+    </ul>
+
+    <h3 class="skills__subtitle smoke">Aprendiendo</h3>
+    <ul class="skills__ul">
+      {
+        learning.map((tech) => (
+          <li class="skills__li">
+            <img src={tech.icon} alt={tech.name} class="skills__icon" />
+            {tech.name}
+          </li>
+        ))
+      }
+    </ul>
+
+    <h3 class="skills__subtitle smoke">Herramientas</h3>
+    <ul class="skills__ul">
+      {
+        tools.map((tool) => (
+          <li class="skills__li">
+            <img src={tool.icon} alt={tool.name} class="skills__icon" />
+            {tool.name}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .skills {
+    padding: 1em;
+    margin-bottom: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+  }
+  .skills__title {
+    font-size: clamp(1.7rem, 5vw, 2.5rem);
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .skills__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .skills__subtitle {
+    font-size: 1.2em;
+    font-weight: 600;
+    border-bottom: 1px dashed rgba(var(--color), 1);
+    width: fit-content;
+  }
+  .skills__ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+  }
+  .skills__li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.4em;
+  }
+
+  .skills__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+</style>

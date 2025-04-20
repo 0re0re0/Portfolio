@@ -1,0 +1,29 @@
+{
+  "name": "astroportfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "netlify": "netlify"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.2.4",
+    "@fontsource-variable/onest": "5.0.2",
+    "@types/react": "^18.3.13",
+    "@types/react-dom": "^18.3.1",
+    "astro": "^5.0.2",
+    "cal-sans": "^1.0.1",
+    "prettier": "^3.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.7.2",
+    "uuid": "9.0.1"
+  },
+  "devDependencies": {
+    "netlify-cli": "^12.14.0"
+  }
+}

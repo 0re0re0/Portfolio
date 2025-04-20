@@ -1,0 +1,76 @@
+---
+
+---
+
+<footer class="footer">
+  <nav class="nav wrapper">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" href="#home" aria-label="link para ir a Sobre mí">Inicio</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#proyects" aria-label="link para ir a Proyectos">Proyectos</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#skills" aria-label="link para ir a Habilidades">Habilidades</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+<style>
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: rgba(var(--color), 1);
+
+    view-timeline-name: --footer;
+    view-timeline-axis: block;
+
+    animation-timeline: --footer;
+    animation-name: show-footer;
+    animation-range: entry 50% cover 20%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .nav__item {
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav__item:hover {
+    transform: scale(1.2);
+  }
+  .nav__link {
+    font-size: 14px;
+  }
+
+  @keyframes show-footer {
+    from {
+      opacity: -1;
+      /* scale: 0%; */
+      pointer-events: none;
+    }
+    to {
+      opacity: 1;
+      /* scale: 100%; */
+      pointer-events: all;
+    }
+  }
+</style>

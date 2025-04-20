@@ -1,0 +1,68 @@
+---
+import SectionTitle from '@components/section-title/SectionTitle.astro';
+import SoftSkillsIcon from '../icons/SoftSkillsIcon.astro';
+---
+
+<section class="soft wrapper">
+  <SectionTitle title="Soft Skills">
+    <SoftSkillsIcon class="section-icon" />
+  </SectionTitle>
+
+  <div class="soft__content">
+    <article class="soft-skill">
+      <h3 class="soft-title">Trabajo en equipo</h3>
+      <p class="soft-text smoke">
+        Mi experiencia laboral en diferentes sectores me ha enseñado que el éxito de cualquier proyecto depende de un buen trabajo en equipo. Valoro la importancia de escuchar activamente, compartir conocimientos y mantener una actitud colaborativa. Ahora, como desarrollador, aplico estos principios para crear un ambiente de trabajo positivo y productivo.
+      </p>
+    </article>
+    <article class="soft-skill">
+      <h3 class="soft-title">Adaptabilidad</h3>
+      <p class="soft-text smoke">
+        Como desarrollador junior, me emociona enfrentarme a nuevos retos y tecnologías. Disfruto saliendo de mi zona de confort adaptándome a diferentes situaciones. Esta mentalidad me ha permitido aprender rápidamente y mantenerme al día con las últimas tendencias en desarrollo web.
+
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .soft {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    margin-bottom: 7rem;
+  }
+  .soft__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 2rem;
+  }
+  @media screen and (max-width: 768px) {
+    .soft__content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .soft-skill {
+    padding: 2rem;
+    border-radius: 0.4rem;
+    background-color: rgba(var(--color-button-muted), 0.5);
+
+    --tw-ring-color: rgba(var(--muted), 1);
+    --tw-ring-shadow: 0 0 0 1px var(--tw-ring-color);
+    box-shadow: var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+  .soft-title {
+    font-size: 1.2em;
+    font-weight: 700;
+
+    margin-bottom: 1rem;
+  }
+  .soft-text {
+    text-wrap: pretty;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+</style>

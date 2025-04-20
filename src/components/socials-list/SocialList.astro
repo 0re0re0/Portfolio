@@ -1,0 +1,46 @@
+---
+import GitHub from '@components/icons/GitHub.astro';
+import LinkedIn from '@components/icons/LinkedIn.astro';
+import Download from '@components/icons/Download.astro';
+import './sociaList.css';
+---
+
+<ul class="social">
+  <li class="social__item">
+    <a
+      class="social__link"
+      href="https://github.com/0re0re0"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="link para ir a Github"
+    >
+      <GitHub class="social__icon" />
+      Github</a
+    >
+  </li>
+  
+  <li class="social__item">
+    <a
+      class="social__link"
+      href="https://linkedin.com/in/javiercardenasperdomo97"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="link para ir a LinkedIn"
+    >
+      <LinkedIn class="social__icon" />
+      LinkedIn</a
+    >
+  </li>
+ 
+  <li class="social__item">
+    <a
+      class="social__link"
+      href="/download/CV  Javier Cardenas Perdomo.pdf"
+      download="CV_Javier_Cardenas"
+      aria-label="Descargar CV"
+    >
+      <Download class="social__icon" />
+       Descargar CV</a
+    >
+  </li>
+</ul>
