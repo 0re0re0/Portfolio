@@ -34,14 +34,14 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in;
 
-  background-color: rgb(255 255 255 / 0.1);
+  background-color: rgba(12, 82, 69, 0.427);
   display: flex;
   align-items: center;
   gap: 0.3em;
 }
 @media (hover: hover) {
   .filters__tag:hover {
-    background-color: rgb(255 255 255 / 0.15);
+    background-color: rgba(9, 62, 52, 0.427);
   }
 }
 
