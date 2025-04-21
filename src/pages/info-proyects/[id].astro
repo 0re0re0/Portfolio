@@ -27,11 +27,11 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
 
 <Layout title={id}>
   <main class="proyect-info wrapper">
-    <div>
-      <button class="go-back__btn" onclick="history.back()" aria-label="boton para ir a los proyectos">
-        <ArrowBackIcon class="go-back__arrow" />
-        Volver a proyectos
-      </button>
+    <button class="go-back__btn" onclick="history.back()" aria-label="boton para ir a los proyectos">
+      <ArrowBackIcon class="go-back__arrow" />
+      Volver a proyectos
+    </button>
+    <div class="proyect-info__gradient">
       <h1 class="proyect__title" transition:name={`${title}-title`}>
         {title}
       </h1>
@@ -175,6 +175,19 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
       margin-bottom: 4rem;
     }
 
+    /* Gradient background for info container */
+    .proyect-info__gradient {
+      width: 100%;
+      border-radius: 1.2em;
+      padding: 2.5rem 2rem;
+      background: linear-gradient(135deg, rgba(var(--color-fill), 0.95) 60%, rgba(var(--color), 0.12) 100%);
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
     .proyect-info__img {
       max-width: 50rem;
       aspect-ratio: 16/9;
@@ -259,6 +272,9 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
       .proyect-info__img {
         height: 200px;
       }
+      .proyect-info__gradient {
+        padding: 1.5rem 0.5rem;
+      }
     }
 
     .proyect-info__datails {
@@ -267,6 +283,7 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
       display: flex;
       flex-direction: column;
       row-gap: 1.5rem;
+      align-items: center; /* Center children horizontally */
     }
 
     .proyect__title {
@@ -286,7 +303,8 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
     .proyect__links {
       font-weight: 400;
       display: flex;
-      justify-items: center;
+      justify-content: center; /* Center buttons horizontally */
+      align-items: center;
       gap: 2em;
     }
     .proyect__link {
