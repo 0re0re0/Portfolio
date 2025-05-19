@@ -20,9 +20,6 @@ Estoy constantemente buscando nuevas oportunidades para aprender y crecer como d
 
 Este proyecto está bajo la Licencia MIT Si decides usar este proyecto, por favor, mencióname.
 
-## Inspiración
-
-Este portfolio está inspirado en el trabajo de [Joselu](https://github.com/JoseIu). ¡Muchas gracias por la inspiración!
 
 ## Contacto
 
