@@ -1,19 +1,29 @@
 ---
-title: 'Calculadora'
-image: '../images/calculatorBlack.png'
+title: 'Habit tracker'
+image: '../images/habitMenuBlack.png'
 images:
-  - '../images/calculatorBlack.png'
-  - '../images/calculatorWhite.png'
-summary: 'Calculadora iOS'
+  - '../images/habitMenuBlack.png'
+  - '../images/habitMenuWhite.png'
+  - '../images/addHabitBlack.png'
+  - '../images/addHabitWhite.png'
+  - '../images/habitTodoBlack.png'
+  - '../images/habitTodoWhite.png'
+  - '../images/habitSettingsBlack.png'
+  - '../images/habitSettingsWhite.png'
+  - '../images/habitPink.png'
+  - '../images/habitBlue.png'
+
+summary: 'Gestor de Habitos iOS'
 draft: false
 isInConstruction: false
-isFeatured: false
+isFeatured: true
 tags:
   - iOS
   - Swift
-  - UIKit
-
-repoUrl: https://github.com/0re0re0/IOSCalculadora
+  - SwiftUI
+  - CoreData
 ---
 
-Calculadora iOS que replica la interfaz y funcionalidad de la calculadora nativa de Apple. Incluye operaciones básicas, porcentajes, números negativos y decimales, con una interfaz limpia y responsive que se adapta a diferentes tamaños de pantalla.
+HabitTracker es una aplicación iOS diseñada para ayudarte a formar y mantener hábitos positivos, así como gestionar tus tareas diarias. Desarrollada con SwiftUI y CoreData, ofrece una experiencia fluida y moderna para el seguimiento de hábitos y tareas.
+
+Repositorio bloqueado hasta que se publique la aplicacion en la AppStore.

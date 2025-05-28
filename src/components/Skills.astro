@@ -2,24 +2,25 @@
 import SkillsIcon from './icons/SkillsIcon.astro';
 import SectionTitle from './section-title/SectionTitle.astro';
 
-const technologies = [
-  { name: "Astro", icon: "https://skillicons.dev/icons?i=astro" },
-  { name: "HTML", icon: "https://skillicons.dev/icons?i=html" },
-  { name: "CSS", icon: "https://skillicons.dev/icons?i=css" },
-  { name: "JS", icon: "https://skillicons.dev/icons?i=js" },
-  { name: "NodeJS", icon: "https://skillicons.dev/icons?i=nodejs" },
+
+const iOS = [
+  { name: "Swift", icon: "https://skillicons.dev/icons?i=swift", class: "larger-icon" },  
+  { name: "SwiftUI", icon: "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png", class: "larger-icon" },
+  { name: "UIKit", icon: "https://img.icons8.com/?size=150&id=BQbKONe0owd3&format=png&color=000000", class: "larger-icon" },
 ];
 
-const learning = [
-  { name: "Swift", icon: "https://skillicons.dev/icons?i=swift" },
-  { name: "SwiftUI", icon: "https://skillicons.dev/icons?i=swift" },
-  { name: "UIKit", icon: "https://skillicons.dev/icons?i=swift" },
+const WebBackground = [
+  { name: "Astro", icon: "https://skillicons.dev/icons?i=astro", class: "larger-icon" },
+  { name: "HTML", icon: "https://skillicons.dev/icons?i=html", class: "larger-icon" },
+  { name: "CSS", icon: "https://skillicons.dev/icons?i=css", class: "larger-icon" },
+  { name: "JS", icon: "https://skillicons.dev/icons?i=js", class: "larger-icon" },
+  { name: "NodeJS", icon: "https://skillicons.dev/icons?i=nodejs", class: "larger-icon" },
 ];
 
 const tools = [
-  { name: "GitHub", icon: "https://skillicons.dev/icons?i=github" },
-  { name: "Figma", icon: "https://skillicons.dev/icons?i=figma" },
-  { name: "MongoDB", icon: "https://skillicons.dev/icons?i=mongodb" },
+  { name: "GitHub", icon: "https://skillicons.dev/icons?i=github", class: "larger-icon" },
+  { name: "Figma", icon: "https://skillicons.dev/icons?i=figma", class: "larger-icon" },
+  { name: "MongoDB", icon: "https://skillicons.dev/icons?i=mongodb", class: "larger-icon" },
 ];
 ---
 
@@ -29,22 +30,22 @@ const tools = [
   </SectionTitle>
 
   <div class="skills__content">
-    <h3 class="skills__subtitle smoke">Tecnologías</h3>
+    <h3 class="skills__subtitle smoke">iOS Dev</h3>
     <ul class="skills__ul">
       {
-        technologies.map((tech) => (
+        iOS.map((tech) => (
           <li class="skills__li">
-            <img src={tech.icon} alt={tech.name} class="skills__icon" />
+            <img src={tech.icon} alt={tech.name} class={`skills__icon ${tech.class || ''}`} />
             {tech.name}
           </li>
         ))
       }
     </ul>
 
-    <h3 class="skills__subtitle smoke">Aprendiendo</h3>
+    <h3 class="skills__subtitle smoke">Web Background</h3>
     <ul class="skills__ul">
       {
-        learning.map((tech) => (
+        WebBackground.map((tech) => (
           <li class="skills__li">
             <img src={tech.icon} alt={tech.name} class="skills__icon" />
             {tech.name}
@@ -93,24 +94,28 @@ const tools = [
   .skills__subtitle {
     font-size: 1.2em;
     font-weight: 600;
-    border-bottom: 1px dashed rgba(var(--color), 1);
+    border-bottom: 1px solid rgba(var(--color), 1); 
     width: fit-content;
   }
   .skills__ul {
     display: flex;
     flex-wrap: wrap;
-
-    gap: 1.5rem;
+    gap: 1.5em; 
   }
   .skills__li {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.4em;
+    gap: 0.5em;
+    text-align: center;
+    margin: 0.25em; 
   }
-
   .skills__icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  .larger-icon {
+    width: 3rem;
+    height: 3rem;
   }
 </style>

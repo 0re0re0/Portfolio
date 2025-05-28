@@ -11,17 +11,6 @@ const work = defineCollection({
     companyUrl: z.string()
   })
 });
-const hackathon = defineCollection({
-  type: 'content',
-  schema: z.object({
-    company: z.string(),
-    role: z.string(),
-    dateStart: z.date(),
-    dateEnd: z.date(),
-    location: z.string(),
-    companyUrl: z.string()
-  })
-});
 
 const projects = defineCollection({
   type: 'content',
@@ -36,8 +25,8 @@ const projects = defineCollection({
       tags: z.array(z.string()),
       draft: z.boolean().optional(),
       demoUrl: z.string().optional(),
-      repoUrl: z.string()
+      repoUrl: z.string().optional(),
     })
 });
 
-export const collections = { work, hackathon, projects };
+export const collections = { work, projects };

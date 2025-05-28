@@ -1,7 +1,7 @@
 ---
-title: 'SupraMarket'
-image: '../images/supramarket.png'
-summary: 'Tienda online'
+title: 'UserControl'
+image: '../images/userControl.png'
+summary: 'Gestión de usuarios'
 draft: false
 isInConstruction: false
 isFeatured: false
@@ -10,9 +10,10 @@ tags:
   - Html
   - Css
   - Javascript
-demoUrl: https://supramarket.netlify.app/
-repoUrl: https://github.com/0re0re0/SupraMarket
+  - Nodejs
+  - Mongo DB
+demoUrl: https://usercontrol.onrender.com/
+repoUrl: https://github.com/0re0re0/UserControl
 ---
 
-Tienda online que ofrece una experiencia de compra intuitiva y segura. Incluye sistema de autenticación de usuarios, catálogo de productos con filtros, carrito de compras persistente y validación de formularios en tiempo real.
-Actualmente la api que proporciona el catalogo esta deshabilitada.
+Sistema de gestión de usuarios con autenticación segura y monitoreo de actividad en tiempo real. Incluye registro con validación de datos, control de intentos de inicio de sesión, seguimiento de sesiones activas y panel administrativo para gestionar usuarios. Mantiene un registro detallado de la actividad de cada usuario.

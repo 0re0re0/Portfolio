@@ -1,19 +1,15 @@
 ---
-title: 'Habit tracker'
+title: 'Tests PER'
 image: '../images/habitMenuBlack.png'
 images:
-  - '../images/habitMenuBlack.png'
-  - '../images/habitMenuWhite.png'
-  - '../images/addHabitBlack.png'
-  - '../images/addHabitWhite.png'
-  - '../images/habitTodoBlack.png'
-  - '../images/habitTodoWhite.png'
-  - '../images/habitSettingsBlack.png'
-  - '../images/habitSettingsWhite.png'
-  - '../images/habitPink.png'
-  - '../images/habitBlue.png'
+  - '../images/PERMenu.png'
+  - '../images/PERMenuExamen.png'
+  - '../images/PERMenuGoExamen.png'
+  - '../images/PERMenuInfo.png'
+  - '../images/PERMenuInfoContacto.png'
 
-summary: 'Gestor de Habitos iOS'
+
+summary: 'App de preparación para el examen PER'
 draft: false
 isInConstruction: true
 isFeatured: true
@@ -21,10 +17,13 @@ tags:
   - iOS
   - Swift
   - SwiftUI
-  - CoreData
-repoUrl: https://github.com/0re0re0
+  - Clean
+  - Firebase
+
 ---
 
-HabitTracker es una aplicación iOS diseñada para ayudarte a formar y mantener hábitos positivos, así como gestionar tus tareas diarias. Desarrollada con SwiftUI y CoreData, ofrece una experiencia fluida y moderna para el seguimiento de hábitos y tareas.
+Tests PER es una aplicación iOS desarrollada con SwiftUI y enfocada en la preparación del examen oficial para el título de Patrón de Embarcaciones de Recreo (PER) en España. Permite al usuario practicar con tests organizados por unidades temáticas y simular el formato real del examen.
+
+La app proporciona una experiencia moderna y sencilla de usar, integrando navegación fluida, hojas de vista previa del examen y selección dinámica de temas ademas de un apartado para ver el historial y la evolucion del ususario. Ideal para quienes se están preparando para obtener la titulación náutica de recreo.
 
 Repositorio bloqueado hasta que se publique la aplicacion en la AppStore.

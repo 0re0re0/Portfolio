@@ -1,19 +1,17 @@
 ---
-title: 'UserControl'
-image: '../images/userControl.png'
-summary: 'Gestión de usuarios'
+title: 'UpDev'
+image: '../images/updev.png'
+summary: 'Plataforma educativa'
 draft: false
 isInConstruction: false
-isFeatured: false
+isFeatured: true
 tags:
   - web
   - Html
   - Css
   - Javascript
-  - Nodejs
-  - Mongo DB
-demoUrl: https://usercontrol.onrender.com/
-repoUrl: https://github.com/0re0re0/UserControl
+demoUrl: https://updevsite.netlify.app/
+repoUrl: https://github.com/0re0re0/UpDev
 ---
 
-Sistema de gestión de usuarios con autenticación segura y monitoreo de actividad en tiempo real. Incluye registro con validación de datos, control de intentos de inicio de sesión, seguimiento de sesiones activas y panel administrativo para gestionar usuarios. Mantiene un registro detallado de la actividad de cada usuario.
+Demo de lo que seria una plataforma educativa especializada en programación que ofrece una experiencia de aprendizaje interactiva y personalizada. Incluye sistema de gestión de cursos, seguimiento de progreso, recursos multimedia y ejercicios prácticos para el desarrollo de habilidades en programación.

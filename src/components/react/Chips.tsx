@@ -1,17 +1,15 @@
 import './chips.css';
 type Props = {
-  tegnologies: string[];
+  technologies: string[];
 };
-export const Chips = ({ tegnologies }: Props) => {
+export const Chips = ({ technologies }: Props) => {
   return (
     <ul className="chips">
-      {tegnologies.map((teg, index) => {
-        return (
-          <li key={teg + index} className="chip">
-            {teg}
-          </li>
-        );
-      })}
+      {technologies.map((tech, index) => (
+        <li key={tech + index} className="chip">
+          {tech}
+        </li>
+      ))}
     </ul>
   );
 };

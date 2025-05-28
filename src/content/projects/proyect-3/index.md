@@ -1,17 +1,19 @@
 ---
-title: 'UpDev'
-image: '../images/updev.png'
-summary: 'Plataforma educativa'
+title: 'Calculadora'
+image: '../images/calculatorBlack.png'
+images:
+  - '../images/calculatorBlack.png'
+  - '../images/calculatorWhite.png'
+summary: 'Calculadora iOS'
 draft: false
 isInConstruction: false
 isFeatured: true
 tags:
-  - web
-  - Html
-  - Css
-  - Javascript
-demoUrl: https://updevsite.netlify.app/
-repoUrl: https://github.com/0re0re0/UpDev
+  - iOS
+  - Swift
+  - UIKit
+
+repoUrl: https://github.com/0re0re0/IOSCalculadora
 ---
 
-Demo de lo que seria una plataforma educativa especializada en programación que ofrece una experiencia de aprendizaje interactiva y personalizada. Incluye sistema de gestión de cursos, seguimiento de progreso, recursos multimedia y ejercicios prácticos para el desarrollo de habilidades en programación.
+Calculadora iOS que replica la interfaz y funcionalidad de la calculadora nativa de Apple. Incluye operaciones básicas, porcentajes, números negativos y decimales, con una interfaz limpia y responsive que se adapta a diferentes tamaños de pantalla.

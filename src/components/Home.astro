@@ -2,32 +2,53 @@
 import WorldMap from './icons/WorldMap.astro';
 import SocialList from './socials-list/SocialList.astro';
 import MailIcon from './icons/MailIcon.astro';
-
 ---
 
 <script>
   function updatePath() {
-    const textMain = document.querySelector('#anim-p') as HTMLElement;
-    const path = document.querySelector('#border-path') as SVGPathElement;
+    const profile = document.querySelector('#anim-p');
+    const pathTop = document.querySelector('#path-top');
+    const pathBottom = document.querySelector('#path-bottom');
 
-    if (textMain && path) {
-      path.setAttribute(
-        'd',
-        `M0,0 V${textMain.offsetHeight} H${textMain.offsetWidth} v${textMain.offsetHeight}`
-      );
-      const pathLength = path.getTotalLength();
+    if (profile && pathTop && pathBottom) {
+      const width = profile.offsetWidth;
+      const height = profile.offsetHeight;
 
-      path.style.strokeDasharray = pathLength.toString();
-      path.style.strokeDashoffset = pathLength.toString();
+      const startX = 0;
+      const startY = height + 10;
+      const horizontalEndX = width + 100;
+      const bifurcationHeight = 200;
+
+      // Top path
+      const dTop = `
+        M ${startX},${startY}
+        L ${horizontalEndX},${startY}
+        l 0,-${bifurcationHeight}
+      `;
+
+      // Bottom path
+      const dBottom = `
+        M ${startX},${startY}
+        L ${horizontalEndX},${startY}
+        l 0,${bifurcationHeight}
+      `;
+
+      pathTop.setAttribute('d', dTop.trim());
+      pathBottom.setAttribute('d', dBottom.trim());
+
+      const lengthTop = pathTop.getTotalLength();
+      const lengthBottom = pathBottom.getTotalLength();
+
+      pathTop.style.strokeDasharray = lengthTop.toString();
+      pathTop.style.strokeDashoffset = lengthTop.toString();
+
+      pathBottom.style.strokeDasharray = lengthBottom.toString();
+      pathBottom.style.strokeDashoffset = lengthBottom.toString();
     }
   }
 
-  // Update the path when the page loads
   window.addEventListener('DOMContentLoaded', updatePath);
-  // Update the path when the window is resized
   window.addEventListener('resize', updatePath);
-
-  // Update the path when the window is resized (for astro)
   document.addEventListener('astro:after-swap', updatePath);
 </script>
 
@@ -35,38 +56,47 @@ import MailIcon from './icons/MailIcon.astro';
   <section class="right">
     <div class="profile" id="anim-p">
       <span class="right__name">Javi</span>
-      <h1 class="profile__role">iOS & Web Developer</h1>
+      <h1 class="profile__role">iOS <br /> Developer</h1>
       <div class="profile__location smoke">
         <WorldMap class="profile__icon" />
         <span>Murcia, España</span>
         <MailIcon class="profile__icon" />
         <a href="mailto:Cardenas97vga@gmail.com">Cardenas97vga@gmail.com</a>
       </div>
-      <svg class="profile__fancy">
+      <svg class="profile__fancy" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style={{ stopColor: '#25b87a', stopOpacity: 1 }}></stop>
-            <stop offset="100%" style={{ stopColor: '#0e5d3d', stopOpacity: 1 }}></stop>
+            <stop offset="0%" style="stop-color: #AE500F; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: #F97316; stop-opacity: 1" />
           </linearGradient>
         </defs>
-        <path id="border-path" fill="none" stroke="url(#gradient)" stroke-width="1"></path>
+        <path id="path-top" fill="none" stroke="url(#gradient)" stroke-width="2" />
+        <path id="path-bottom" fill="none" stroke="url(#gradient)" stroke-width="2" />
       </svg>
     </div>
     <p class="right__description smoke">
-      Desarrollador con experiencia web y
-      gran interés en el diseño UX/UI. <br>
-      Ahora enfocado en el desarrollo de aplicaciones para iOS con
-      Swift <br> una nueva rama de conomiento que quiero expandir.
+      Con experiencia previa en desarrollo web y sensibilidad por el diseño UX/UI, hoy me especializo en crear aplicaciones nativas para iOS, donde realmente disfruto cada parte del proceso.
     </p>
     <SocialList />
   </section>
   <div class="left">
     <figure class="figure">
       <img src="/user.webp" alt="" class="figure__img" />
-      <div class="figure__circle"></div>
+      <svg class="figure__circle" viewBox="0 0 280 280" aria-hidden="true">
+        <circle
+          cx="140"
+          cy="140"
+          r="139"
+          stroke="url(#gradient)"
+          stroke-width="2"
+          fill="none"
+          class="circle-path"
+        />
+      </svg>
     </figure>
   </div>
 </section>
+
 <style>
   .home {
     padding: 8rem 1rem 1rem 1rem;
@@ -77,24 +107,27 @@ import MailIcon from './icons/MailIcon.astro';
     gap: 1rem;
     row-gap: 5rem;
   }
+
   .right {
     flex-basis: 35%;
     flex-grow: 1;
-
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    .right__description {
-      max-width: 40rem;
-      line-height: 1.5;
-      text-wrap: pretty;
-      padding: 0 1rem 0 0;
-    }
   }
+
+  .right__description {
+    max-width: 40rem;
+    line-height: 1.5;
+    text-wrap: pretty;
+    padding: 0 1rem 0 0;
+  }
+
   .right__name {
     font-size: 1.3rem;
     color: rgba(var(--color), 1);
   }
+
   .left {
     padding-right: 2rem;
     flex-basis: 25rem;
@@ -103,6 +136,7 @@ import MailIcon from './icons/MailIcon.astro';
     align-items: center;
     justify-content: end;
   }
+
   @media screen and (max-width: 796px) {
     .left {
       justify-content: center;
@@ -114,83 +148,81 @@ import MailIcon from './icons/MailIcon.astro';
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
-
-    .profile__role {
-      font-size: clamp(3em, 9vw, 5em);
-      font-weight: 700;
-      line-height: clamp(3rem, 10vw, 5rem);
-    }
-    .profile__subtitle,
-    .profile__location,
-    .profile__email {
-      line-height: 1.5rem;
-    }
-    .profile__location,
-    .profile__email {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.875em;
-    }
-    .profile__icon {
-      width: 0.9rem;
-    }
-    .mail-separator {
-      margin: 0 0.2rem;
-      opacity: 0.6;
-    }
-    .profile__icon {
-      width: 0.9rem;
-    }
   }
+
+  .profile__role {
+    font-size: clamp(3em, 9vw, 5em);
+    font-weight: 700;
+    line-height: clamp(3rem, 10vw, 5rem);
+  }
+
+  .profile__location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875em;
+  }
+
+  .profile__icon {
+    width: 0.9rem;
+  }
+
   .profile__fancy {
     position: absolute;
-
     width: 100%;
+    height: 200%;
     z-index: -1;
-    left: -0.7rem;
+    left: 0;
+    top: 0;
     overflow: visible;
   }
 
   .figure {
     width: fit-content;
     position: relative;
-    .figure__img {
-      max-width: 15rem;
-      border-radius: 50%;
-      aspect-ratio: 1/1;
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    }
-    .figure__circle {
-      position: absolute;
-      inset: -0.5rem; 
-      border: 2px solid rgba(var(--color), 0.5);
-      border-radius: 50%;
-      z-index: -1;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(var(--color), 0.2);
-        border-radius: 100%;
-        filter: blur(100px);
-      }
+    display: inline-block;
+  }
+
+  .figure__img {
+    max-width: 240px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .figure__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    overflow: visible;
+  }
+
+  .circle-path {
+    stroke-dasharray: 873; 
+    stroke-dashoffset: 873;
+    animation: draw-circle 1.8s ease-out forwards;
+    filter: drop-shadow(0 0 3px rgba(249, 115, 22, 0.4));
+  }
+
+  @keyframes draw-circle {
+    to {
+      stroke-dashoffset: 0;
     }
   }
 
-  .about {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.2rem;
-    .about__title {
-      font-size: 1.875em;
-    }
-  }
-  #border-path {
-    animation: draw 1s forwards 1s ease-out;
+  #path-top,
+  #path-bottom {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 1.8s ease-out forwards;
   }
 
   @keyframes draw {

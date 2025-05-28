@@ -2,7 +2,8 @@
 import Chips from '@components/Chips/Chips.astro';
 import type { Technology } from '@interfaces/types';
 import type { CollectionEntry } from 'astro:content';
-import Folder from '../icons/Folder.astro';
+import Smartphone from '../icons/smartphone.astro';
+import Monitor from '../icons/pc.astro';
 
 type Props = {
   proyect: CollectionEntry<'projects'>;
@@ -11,14 +12,20 @@ type Props = {
 const { proyect } = Astro.props;
 const { title, summary, isInConstruction, tags } = proyect.data;
 const tegnologiesTags = tags as Technology[];
+const isIOS = tags.map((tag) => tag.toLowerCase()).includes('ios');
 ---
 
 <article class="proyect">
   <a class="proyect__link" href={`/info-proyects/${proyect.slug}`}>
     <header class="proyect__header">
       <h2 class="proyect__title" transition:name={`${title}-title`}>
-        <Folder class="proyect__icon" />
+        {isIOS ? (
+          <Smartphone class="proyect__icon icon-offset" />
+        ) : (
+          <Monitor class="proyect__icon icon-offset" />
+        )}
         {title}
+        
         <!-- <ArrowShortDown class="proyect__icon proyect__arrow" /> -->
       </h2>
     </header>
@@ -120,4 +127,8 @@ const tegnologiesTags = tags as Technology[];
   .proyect:hover .icon {
     stroke: white;
   }
+
+  .icon-offset {
+  margin-bottom: -2px; /* Ajusta según lo que necesites */
+}
 </style>

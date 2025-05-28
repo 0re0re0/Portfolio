@@ -11,19 +11,21 @@ const TAGS = ['ios','web' ];
 export const Proyects = ({ initialProyects }: Props) => {
   const [proyects, setProyects] = useState(initialProyects);
   const [filterByTag, setFilterByTag] = useState<Set<string>>(new Set());
+  
   const toggleTag = (tag: string) => {
     setFilterByTag(prev => {
-      const newFilters = new Set(prev);
-      if (newFilters.has(tag)) {
-        newFilters.delete(tag);
+      const newFilters = new Set<string>();
+      if (prev.has(tag)) {
+        return newFilters;
       } else {
         newFilters.add(tag);
+        return newFilters;
       }
-      return newFilters;
     });
   };
 
   const filteredProyects = proyects.filter(proyect =>
+    filterByTag.size === 0 ||
     Array.from(filterByTag).every(tag => {
       const tagLowerCase = tag.toLowerCase();
       const tagsLowerCase = proyect.data.tags.map(tag => tag.toLowerCase());
@@ -78,7 +80,7 @@ export const Proyects = ({ initialProyects }: Props) => {
 
       <section>
         <h2 className="proyects-title smoke">
-          Mostrando {filteredProyects.length} de {initialProyects.length} proyetos
+          Mostrando {filteredProyects.length} de {initialProyects.length} proyectos
         </h2>
         <div className="proyects__list">
           {filteredProyects.map(proyect => (

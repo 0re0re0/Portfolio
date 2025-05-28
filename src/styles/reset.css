@@ -16,15 +16,15 @@
 }
 
 :root {
-  --color-text-base: 231, 229, 228;
-  --color-text-muted: 168, 162, 158;
-  --color-text-inverted: 245, 245, 245;
-  --color-fill: 18, 22, 28;
-  --muted: 45, 55, 65; 
-  --color: 21, 150, 100;
-  --color-button-accent: 21, 150, 100;
-  --color-button-accent-hover: 30, 120, 80;
-  --color-button-muted: 12, 13, 23;
+--color-text-base: 235, 240, 255;
+--color-text-muted: 160, 180, 200;
+--color-text-inverted: 10, 10, 10;
+--color-fill: 20, 25, 40;
+--muted: 50, 60, 80;
+--color: 249, 115, 22;
+--color-button-accent: 249, 115, 22;
+--color-button-accent-hover: 255, 255, 255;
+--color-button-muted: 35, 40, 60;
 
   --tw-bg-opacity: 1;
   --tw-ring-offset-shadow: 0 0 #0000;
@@ -47,16 +47,16 @@
   --color-button-accent: 249, 115, 22;
   --color-button-accent-hover: 55, 55, 55;
   --color-button-muted: 244, 239, 238;
-  [data-theme='blue'] {
-    --color-text-base: 248, 250, 252;
-    --color-text-muted: 148, 163, 184;
-    --color-text-inverted: 240, 240, 240;
-    --color-fill: 2, 6, 23;
-    --muted: 51, 65, 85;
-    --color: 59, 130, 246;
-    --color-button-accent: 59, 130, 246;
-    --color-button-accent-hover: 0, 185, 255;
-    --color-button-muted: 30, 41, 59;
+  [data-theme='Arándano Claro'] {
+  --color-text-base: 240, 250, 255;
+  --color-text-muted: 190, 210, 230;
+  --color-text-inverted: 25, 30, 40;
+  --color-fill: 35, 45, 60;
+  --muted: 65, 85, 110;
+  --color: 100, 140, 255;
+  --color-button-accent: 100, 140, 255;
+  --color-button-accent-hover: 255, 255, 255;
+  --color-button-muted: 50, 70, 100;
   }
   [data-theme='red'] {
     --color-text-base: 231, 229, 228;
@@ -70,26 +70,37 @@
     --color-button-muted: 120, 113, 108;
   }
   [data-theme='green'] {
-    --color-text-base: 230, 230, 230;
-    --color-text-muted: 104, 124, 104;
-    --color-text-inverted: 230, 230, 230;
-    --color-fill: 10, 20, 10;
-    --muted: 54, 64, 54;
-    --color: 132, 204, 22;
-    --color-button-accent: 132, 204, 22;
-    --color-button-accent-hover: 120, 220, 120;
-    --color-button-muted: 34, 44, 34;
+--color-text-base: 230, 255, 240;
+--color-text-muted: 170, 200, 180;
+--color-text-inverted: 10, 10, 10;
+--color-fill: 25, 30, 28;
+--muted: 60, 70, 68;
+--color: 72, 199, 142;
+--color-button-accent: 72, 199, 142;
+--color-button-accent-hover: 240, 255, 250;
+--color-button-muted: 35, 40, 38;
   }
-  [data-theme='cyber'] {
-    --color-text-base: 252, 255, 64;
-    --color-text-muted: 125, 125, 125;
-    --color-text-inverted: 240, 240, 240;
-    --color-fill: 15, 15, 15;
-    --muted: 50, 50, 50;
-    --color: 90, 237, 251;
-    --color-button-accent: 90, 237, 251;
-    --color-button-accent-hover: 0, 185, 255;
-    --color-button-muted: 25, 81, 86;
+  [data-theme='biss'] {
+--color-text-base: 235, 240, 255;
+--color-text-muted: 160, 180, 200;
+--color-text-inverted: 10, 10, 10;
+--color-fill: 20, 25, 40;
+--muted: 50, 60, 80;
+--color: 249, 115, 22;
+--color-button-accent: 249, 115, 22;
+--color-button-accent-hover: 255, 255, 255;
+--color-button-muted: 35, 40, 60;
+  }
+  [data-theme='darkorange'] {
+    --color-text-base: 255, 255, 255;       
+    --color-text-muted: 180, 180, 180;        
+    --color-text-inverted: 0, 0, 0;           
+    --color-fill: 20, 20, 20;                 
+    --muted: 60, 60, 60;                      
+    --color: 249, 115, 22;                    
+    --color-button-accent: 249, 115, 22;       
+    --color-button-accent-hover: 255, 255, 255;
+    --color-button-muted: 40, 40, 40;          
   }
 } */
 
