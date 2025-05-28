@@ -16,15 +16,15 @@
 }
 
 :root {
---color-text-base: 235, 240, 255;
---color-text-muted: 160, 180, 200;
+--color-text-base: 245, 245, 255;
+--color-text-muted: 170, 100, 140;
 --color-text-inverted: 10, 10, 10;
---color-fill: 20, 25, 40;
---muted: 50, 60, 80;
---color: 249, 115, 22;
---color-button-accent: 249, 115, 22;
---color-button-accent-hover: 255, 255, 255;
---color-button-muted: 35, 40, 60;
+--color-fill: 16, 16, 26;
+--muted: 58, 46, 66;
+--color: 0, 180, 150;
+--color-button-accent: 0, 180, 150;
+--color-button-accent-hover: 255, 85, 160;
+--color-button-muted: 52, 42, 60;
 
   --tw-bg-opacity: 1;
   --tw-ring-offset-shadow: 0 0 #0000;

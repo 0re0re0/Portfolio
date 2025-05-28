@@ -66,8 +66,8 @@ import MailIcon from './icons/MailIcon.astro';
       <svg class="profile__fancy" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color: #AE500F; stop-opacity: 1" />
-            <stop offset="100%" style="stop-color: #F97316; stop-opacity: 1" />
+            <stop offset="0%" style="stop-color: rgb(0, 180, 150); stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: rgb(255, 85, 160); stop-opacity: 1" />
           </linearGradient>
         </defs>
         <path id="path-top" fill="none" stroke="url(#gradient)" stroke-width="2" />
@@ -191,7 +191,7 @@ import MailIcon from './icons/MailIcon.astro';
       var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     display: block;
     position: relative;
-    z-index: 1;
+    z-index: 0;
   }
 
   .figure__circle {
@@ -202,7 +202,6 @@ import MailIcon from './icons/MailIcon.astro';
     height: 250px;
     transform: translate(-50%, -50%);
     z-index: 0;
-    overflow: visible;
   }
 
   .circle-path {

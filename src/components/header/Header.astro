@@ -72,14 +72,11 @@ const currentPage = normalizePath(Astro.url.pathname);
     width: 100%;
     padding: 1.5rem;
     position: fixed;
-    background-color: rgba(var(--color-fill), 0.8);
-    z-index: 10;
-    backdrop-filter: blur(8px);
-}
+    background-color: rgba(var(--color-fill), var(--tw-bg-opacity));
+    z-index: 1;
+  }
 
-.scrolled {
-    border-bottom: rgba(var(--color), 0.15);
-}
+
 
   .header__container {
     position: relative;
@@ -97,15 +94,18 @@ const currentPage = normalizePath(Astro.url.pathname);
     height: 100%;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in;
-    background-color: var(--tw-bg-opacity));
+    background-color: rgb(var(--color-fill));
+    z-index: 100;
 
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .header__nav--active {
+}
+
+.header__nav--active {
     transform: translateY(0);
-  }
+    opacity: 1;
+}
   @media screen and (min-width: 650px) {
     .header__nav {
       position: relative;
@@ -143,7 +143,7 @@ const currentPage = normalizePath(Astro.url.pathname);
     position: absolute;
     bottom: -0.325rem;
     width: 100%;
-    background-color: rgba(var(--color), 0.15);
+    background-color: rgba(var(--color), 1);
     height: 0.125rem;
   }
   .header__toggle {
