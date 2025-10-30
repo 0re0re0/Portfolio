@@ -8,7 +8,8 @@ const work = defineCollection({
     dateStart: z.date().optional(), 
     dateEnd: z.date().optional(), 
     location: z.string(),
-    companyUrl: z.string()
+    companyUrl: z.string(),
+    order: z.number().default(0) 
   })
 });
 

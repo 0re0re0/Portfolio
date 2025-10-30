@@ -3,6 +3,7 @@ company: 'NTTDATA | aXet app'
 role: 'iOS Developer | 11-06-2025 / Actualidad'
 location: Murcia
 companyUrl: https://www.linkedin.com/company/ntt-data-europe-latam/posts/?feedView=all
+order: 1
 ---
 
 Desarrollo de la aplicaicon interna aXet, aplicacion movil nativa para iOS, chat con agentes de AI. 

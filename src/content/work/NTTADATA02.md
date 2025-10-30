@@ -3,6 +3,7 @@ company: 'NTTDATA | Practicas'
 role: 'iOS Developer | 16-03-2025 / 28-05-2025'
 location: Murcia
 companyUrl: https://www.linkedin.com/company/ntt-data-europe-latam/posts/?feedView=all
+order: 2
 ---
 
 Mantenimiento, corrección de errores e implementación de mejoras en las aplicaciones nativas de iOS del grupo PRISA.  

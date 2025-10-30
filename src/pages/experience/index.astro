@@ -8,7 +8,12 @@ const collection = await getCollection('work');
 
 
 const experiences = collection.sort(
-  (a, b) => new Date(b.data.dateStart).getTime() - new Date(a.data.dateStart).getTime()
+  (a, b) => {
+    if (a.data.order !== undefined && b.data.order !== undefined) {
+      return a.data.order - b.data.order;
+    }
+    return new Date(b.data.dateStart).getTime() - new Date(a.data.dateStart).getTime();
+  }
 );
 ---
 
