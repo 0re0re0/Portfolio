@@ -28,28 +28,23 @@
   flex-wrap: wrap;
 }
 .filters__tag {
-  background: linear-gradient(
-    to right,
-    rgba(0, 180, 150, 0.2),
-    rgba(255, 85, 160, 0.2)
-  );
+  background-color: rgba(var(--color-button-accent), 0.2);
+  border: 1px solid rgba(var(--color), 0.2);
   padding: 0.4rem;
   border-radius: 0.3rem;
   cursor: pointer;
-  transition: background 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
 
   display: flex;
   align-items: center;
   gap: 0.3em;
+  color: rgba(var(--color-text-base), 1);
 }
 
 @media (hover: hover) {
   .filters__tag:hover {
-    background: linear-gradient(
-      to right,
-      rgba(0, 180, 150, 0.3),
-      rgba(255, 85, 160, 0.3)
-    );
+    background-color: rgba(var(--color-button-accent), 0.3);
+    border-color: rgba(var(--color), 0.4);
   }
 }
 

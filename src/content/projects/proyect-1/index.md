@@ -7,6 +7,8 @@ images:
   - '../images/PERMenuGoExamen.png'
   - '../images/PERMenuInfo.png'
   - '../images/PERMenuInfoContacto.png'
+  - '../images/PERTest.png'
+  - '../images/PERMenuResultados.png'
 
 
 summary: 'App de preparación para el examen PER'
@@ -17,6 +19,7 @@ tags:
   - iOS
   - Swift
   - SwiftUI
+  - MVVM
   - Clean
   - Firebase
 

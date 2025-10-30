@@ -3,7 +3,8 @@ import SkillsIcon from './icons/SkillsIcon.astro';
 import SectionTitle from './section-title/SectionTitle.astro';
 
 
-const iOS = [
+
+const iOSTools = [
   { name: "Swift", icon: "https://skillicons.dev/icons?i=swift", class: "larger-icon" },  
   { name: "SwiftUI", icon: "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png", class: "larger-icon" },
   { name: "UIKit", icon: "https://img.icons8.com/?size=150&id=BQbKONe0owd3&format=png&color=000000", class: "larger-icon" },
@@ -20,6 +21,7 @@ const WebBackground = [
 const tools = [
   { name: "GitHub", icon: "https://skillicons.dev/icons?i=github", class: "larger-icon" },
   { name: "Figma", icon: "https://skillicons.dev/icons?i=figma", class: "larger-icon" },
+  { name: "FireBase", icon: "https://skillicons.dev/icons?i=firebase", class: "larger-icon" },
   { name: "MongoDB", icon: "https://skillicons.dev/icons?i=mongodb", class: "larger-icon" },
 ];
 ---
@@ -30,10 +32,10 @@ const tools = [
   </SectionTitle>
 
   <div class="skills__content">
-    <h3 class="skills__subtitle smoke">iOS Dev</h3>
+    <h3 class="skills__subtitle smoke">iOS Tools</h3>
     <ul class="skills__ul">
       {
-        iOS.map((tech) => (
+        iOSTools.map((tech) => (
           <li class="skills__li">
             <img src={tech.icon} alt={tech.name} class={`skills__icon ${tech.class || ''}`} />
             {tech.name}
