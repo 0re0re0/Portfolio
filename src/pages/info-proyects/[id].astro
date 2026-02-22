@@ -46,6 +46,9 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
                 src={img.src}
                 alt={`${title} screenshot ${idx + 1}`}
                 style={`display: ${idx === 0 ? 'block' : 'none'};`}
+                loading={idx === 0 ? 'eager' : 'lazy'}
+                fetchpriority={idx === 0 ? 'high' : 'low'}
+                decoding="async"
                 data-carousel-img
               />
             ))}
@@ -58,6 +61,9 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
             class="ios-image"
             src={image.src}
             alt={title}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
         </div>
       ) : (
@@ -65,6 +71,9 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
           class="proyect-info__img"
           src={image.src}
           alt={title}
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
         />
       )}
 
@@ -156,6 +165,17 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
         color: red !important;
       }
     }
+    :global(.test h1),
+    :global(.test h2),
+    :global(.test h3),
+    :global(.test h4),
+    :global(.test h5),
+    :global(.test h6) {
+      color: rgba(var(--color-button-accent), 1);
+    }
+    .proyect__title {
+      color: rgba(var(--color-button-accent), 1);
+    }
 
     .go-back__btn {
       padding: 0.5em 1em;
@@ -189,8 +209,10 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
       width: 100%;
       border-radius: 1.2em;
       padding: 2.5rem 2rem;
-      background: linear-gradient(105deg, rgba(var(--color), 0.05) 10%, rgba(var(--color-text-muted), 0.12) 100%);
-      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+      background-color: rgba(var(--color-button-muted), 0.35);
+      border: 1px solid rgba(var(--color), 0.15);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+      backdrop-filter: saturate(120%) blur(4px);
       display: flex;
       flex-direction: column;
       align-items: center;

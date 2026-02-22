@@ -16,7 +16,6 @@ isInConstruction: false
 isFeatured: true
 tags:
   - iOS
-  - Swift
   - SwiftUI
   - MVVM
   - Clean

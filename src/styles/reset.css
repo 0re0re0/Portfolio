@@ -16,16 +16,16 @@
 }
 
 :root {
-  --color-text-base: 250, 255, 255;
-  --color-text-muted: 190, 210, 230;
-  --color-text-inverted: 25, 30, 40;
-  --color-fill: 35, 45, 60;
-  --muted: 65, 85, 110;
-  --color: 100, 140, 255;
-  --color-button-accent: 100, 140, 255;
+  --color-text-base: 245, 247, 250;
+  --color-text-muted: 170, 178, 190;
+  --color-text-inverted: 0, 0, 0;
+  --color-fill: 26, 28, 30;
+  --muted: 50, 54, 60;
+  --color: 0, 122, 255;            /* #007AFF */
+  --color-button-accent: 0, 122, 255;
   --color-button-accent-hover: 255, 255, 255;
-  --color-button-muted: 50, 70, 100;
-
+  --color-button-muted: 42, 46, 52;
+  
   --tw-bg-opacity: 1;
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
@@ -199,4 +199,52 @@ body {
   min-height: 100vh;
   font-size: 100%;
   scroll-behavior: smooth;
+}
+
+[data-theme='indigo-rose'] {
+  --color-text-base: 246, 249, 255;
+  --color-text-muted: 196, 206, 222;
+  --color-text-inverted: 15, 20, 30;
+  --color-fill: 30, 36, 50;
+  --muted: 70, 80, 100;
+  --color: 99, 102, 241;
+  --color-button-accent: 236, 72, 153;
+  --color-button-accent-hover: 255, 255, 255;
+  --color-button-muted: 38, 44, 60;
+}
+
+[data-theme='blush-sky'] {
+  --color-text-base: 248, 250, 255;
+  --color-text-muted: 198, 208, 225;
+  --color-text-inverted: 14, 18, 26;
+  --color-fill: 28, 34, 44;
+  --muted: 64, 78, 96;
+  --color: 56, 189, 248;
+  --color-button-accent: 244, 114, 182;
+  --color-button-accent-hover: 255, 255, 255;
+  --color-button-muted: 36, 44, 56;
+}
+
+[data-theme='twilight-lilac'] {
+  --color-text-base: 242, 246, 255;
+  --color-text-muted: 188, 198, 220;
+  --color-text-inverted: 12, 14, 22;
+  --color-fill: 34, 32, 48;
+  --muted: 72, 68, 100;
+  --color: 129, 140, 248;
+  --color-button-accent: 217, 70, 239;
+  --color-button-accent-hover: 255, 255, 255;
+  --color-button-muted: 42, 38, 60;
+}
+
+[data-theme='ocean-rose'] {
+  --color-text-base: 244, 248, 255;
+  --color-text-muted: 190, 205, 225;
+  --color-text-inverted: 14, 18, 24;
+  --color-fill: 26, 34, 42;
+  --muted: 58, 74, 92;
+  --color: 96, 165, 250;
+  --color-button-accent: 251, 113, 133;
+  --color-button-accent-hover: 255, 255, 255;
+  --color-button-muted: 34, 44, 56;
 }
