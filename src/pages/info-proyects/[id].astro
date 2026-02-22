@@ -46,8 +46,8 @@ const isIOS = tags.map((t: string) => t.toLowerCase()).includes('ios');
                 src={img.src}
                 alt={`${title} screenshot ${idx + 1}`}
                 style={`display: ${idx === 0 ? 'block' : 'none'};`}
-                loading={idx === 0 ? 'eager' : 'lazy'}
-                fetchpriority={idx === 0 ? 'high' : 'low'}
+                loading="eager"
+                fetchpriority="high"
                 decoding="async"
                 data-carousel-img
               />

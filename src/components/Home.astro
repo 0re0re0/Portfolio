@@ -6,13 +6,13 @@ import MailIcon from './icons/MailIcon.astro';
 
 <script>
   function updatePath() {
-    const profile = document.querySelector('#anim-p');
-    const pathTop = document.querySelector('#path-top');
-    const pathBottom = document.querySelector('#path-bottom');
+    const profileEl = document.querySelector('#anim-p');
+    const pathTopEl = document.querySelector('#path-top');
+    const pathBottomEl = document.querySelector('#path-bottom');
 
-    if (profile && pathTop && pathBottom) {
-      const width = profile.offsetWidth;
-      const height = profile.offsetHeight;
+    if (profileEl instanceof HTMLElement && pathTopEl instanceof SVGPathElement && pathBottomEl instanceof SVGPathElement) {
+      const width = profileEl.offsetWidth;
+      const height = profileEl.offsetHeight;
 
       const startX = 0;
       const startY = height + 10;
@@ -33,17 +33,17 @@ import MailIcon from './icons/MailIcon.astro';
         l 0,${bifurcationHeight}
       `;
 
-      pathTop.setAttribute('d', dTop.trim());
-      pathBottom.setAttribute('d', dBottom.trim());
+      pathTopEl.setAttribute('d', dTop.trim());
+      pathBottomEl.setAttribute('d', dBottom.trim());
 
-      const lengthTop = pathTop.getTotalLength();
-      const lengthBottom = pathBottom.getTotalLength();
+      const lengthTop = pathTopEl.getTotalLength();
+      const lengthBottom = pathBottomEl.getTotalLength();
 
-      pathTop.style.strokeDasharray = lengthTop.toString();
-      pathTop.style.strokeDashoffset = lengthTop.toString();
+      pathTopEl.style.strokeDasharray = lengthTop.toString();
+      pathTopEl.style.strokeDashoffset = lengthTop.toString();
 
-      pathBottom.style.strokeDasharray = lengthBottom.toString();
-      pathBottom.style.strokeDashoffset = lengthBottom.toString();
+      pathBottomEl.style.strokeDasharray = lengthBottom.toString();
+      pathBottomEl.style.strokeDashoffset = lengthBottom.toString();
     }
   }
 
@@ -81,7 +81,16 @@ import MailIcon from './icons/MailIcon.astro';
   </section>
   <div class="left">
     <figure class="figure">
-      <img src="/user.webp" alt="" class="figure__img" />
+      <img
+        src="/user.webp"
+        alt="Foto de perfil"
+        class="figure__img"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        width="240"
+        height="240"
+      />
       <svg class="figure__circle" viewBox="0 0 280 280" aria-hidden="true">
         <circle
           cx="140"
