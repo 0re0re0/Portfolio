@@ -6,7 +6,7 @@ import { getProjectsCollection } from 'src/utils/getProjectsCollection';
 const projects = await getProjectsCollection();
 ---
 
-<Layout title="Proyectos">
+<Layout title="Apps">
   <main class="wrapper">
     <div class="projects">
       <Proyects client:only="react" initialProyects={projects} />
@@ -20,10 +20,5 @@ const projects = await getProjectsCollection();
 
     display: grid;
     gap: 1.5rem;
-  }
-  @media screen and (min-width: 1200px) {
-    .projects {
-      grid-template-columns: 250px 1fr;
-    }
   }
 </style>

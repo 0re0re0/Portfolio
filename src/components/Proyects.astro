@@ -1,6 +1,6 @@
 ---
 import { getProjectsFetaturd } from 'src/utils/getProjectsCollection';
-import CodeIcon from './icons/Code.astro';
+import Smartphone from './icons/smartphone.astro';
 import ProyectCard from './ProyectCard/ProyectCard.astro';
 import SectionTitle from './section-title/SectionTitle.astro';
 
@@ -8,13 +8,17 @@ const projects = await getProjectsFetaturd();
 ---
 
 <section class="proyects wrapper" id="proyects" transition:persist>
-  <SectionTitle title="Proyectos destacados">
-    <CodeIcon class="section-icon" />
+  <SectionTitle title="Apps Destacadas">
+    <Smartphone class="section-icon" />
   </SectionTitle>
 
-  <div class="proyects__list">
-    {projects.map(proyect => <ProyectCard proyect={proyect} />)}
-  </div>
+<div class="proyects__list">
+  {
+    projects
+      .filter(proyect => (proyect.data.tags || []).map(t => t.toLowerCase()).includes('ios'))
+      .map(proyect => <ProyectCard proyect={proyect} />)
+  }
+</div>
 
 </section>
 

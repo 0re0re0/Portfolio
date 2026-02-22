@@ -1,16 +1,15 @@
 ---
-company: 'NTTDATA | aXet app'
-role: 'iOS Developer | 11-06-2025 / Actualidad'
+company: 'NTTDATA | Carpeta Empresa - Carpeta Ciudada (Junta de Andalucia)'
+role: 'iOS Developer | 16-11-2025 / Actualidad'
 location: Murcia
 companyUrl: https://www.linkedin.com/company/ntt-data-europe-latam/posts/?feedView=all
 order: 1
 ---
 
-Desarrollo de la aplicaicon interna aXet, aplicacion movil nativa para iOS, chat con agentes de AI. 
-- Uso de SwiftUI para la interfaz de usuario
+Desarrollo y mantenimiento de las aplicaciones Carpeta Empresa y Carpeta Ciudadana para la Junta de Andalucía.
 - Arquitectura MVVM-CLEAN
-- Persistencia de datos local
-- Sistema de localización multi-idioma 
-- Login seguro con autenticacion de dos factores con Okta
-- Soporte para modo oscuro
-- Llamadas a servicios
+- Desarrollo de nuevas funcionalidades en Swift y SwiftUI
+- Integración con servicios de la administración pública
+- Gestión de certificados digitales y firma electrónica
+- Accesibilidad y adaptación a normativas WCAG
+- Trabajo en equipo bajo metodologías ágiles (Scrum)

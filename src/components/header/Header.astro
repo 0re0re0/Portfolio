@@ -1,8 +1,8 @@
 ---
 const links = [
   { href: '/', text: 'Sobre mí' },
-  { href: '/projects', text: 'Proyectos personales' },
-  { href: '/experience', text: 'Experiencia Profesional' }
+  { href: '/projects', text: 'Apps' },
+  { href: '/experience', text: 'Experiencia' }
 ];
 const normalizePath = (path: string) => path.replace(/\/$/, '') || '/';
 const currentPage = normalizePath(Astro.url.pathname);

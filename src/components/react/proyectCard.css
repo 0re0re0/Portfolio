@@ -28,8 +28,8 @@
   font-size: clamp(1rem, 2vw, 1.2rem);
 
   display: flex;
-  align-items: flex-end;
-  gap: 0.3em;
+  align-items: center;
+  gap: 1rem;
   transition:
     color 0.3s ease-in,
     border-color 0.3s ease-in;
@@ -42,10 +42,31 @@
     transform: translate(0.4rem, -0.3rem);
   }
 }
+.badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.badge--new {
+  background-color: rgba(var(--color), 0.15);
+  color: rgb(var(--color));
+  border: 1px solid rgba(var(--color), 0.3);
+}
+
+.badge--wip {
+  background-color: rgba(var(--color-button-accent), 0.15);
+  color: rgb(var(--color-button-accent));
+  border: 1px solid rgba(var(--color-button-accent), 0.3);
+}
 .proyect__content {
   display: flex;
   flex-direction: column;
-  row-gap: 0.4rem;
+  row-gap: 1rem;
 }
 .proyect__icon {
   width: 1rem;

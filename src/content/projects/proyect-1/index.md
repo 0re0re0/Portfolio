@@ -10,10 +10,11 @@ images:
   - '../images/filters.gif'
 repoUrl: https://github.com/0re0re0/iOSPatronTestReadme/tree/main
 
-summary: 'iOS app para preparar los examenes de PER y PNB'
+summary: 'Test y Estudio iOS'
 draft: false
 isInConstruction: false
 isFeatured: true
+isNew: true
 tags:
   - iOS
   - SwiftUI
@@ -21,7 +22,6 @@ tags:
   - Clean
   - Firebase
   - SwiftData
-  - Coordinator
 
 ---
 

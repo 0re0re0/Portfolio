@@ -15,7 +15,7 @@ images:
 
 summary: 'Gestor de Habitos iOS'
 draft: false
-isInConstruction: false
+isInConstruction: true
 isFeatured: true
 tags:
   - iOS

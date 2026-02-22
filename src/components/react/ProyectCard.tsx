@@ -6,7 +6,7 @@ type Props = {
   proyect: CollectionEntry<'projects'>;
 };
 export const ProyectCard = ({ proyect }: Props) => {
-  const { title, summary, isInConstruction, tags } = proyect.data;
+  const { title, summary, isInConstruction, tags, isNew } = proyect.data;
   const isIOS = tags.map((tag) => tag.toLowerCase()).includes('ios');
 
   return (
@@ -14,41 +14,44 @@ export const ProyectCard = ({ proyect }: Props) => {
       <a className="proyect__link" href={`/info-proyects/${proyect.slug}`}>
         <header className="proyect__header">
           <h2 className="proyect__title" style={{ viewTransitionName: `${title}-title` }}>
-            {isIOS ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(var(--color), 1)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="proyect__icon icon-offset lucide lucide-smartphone size-4"
-              >
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="4" />
-                <line x1="12" y1="18" x2="12.01" y2="18" />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(var(--color), 1)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="proyect__icon icon-offset lucide lucide-monitor size-4"
-              >
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                <line x1="8" y1="21" x2="16" y2="21" />
-                <line x1="12" y1="17" x2="12" y2="21" />
-              </svg>
-            )}
-            {title}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.3em' }}>
+              {isIOS ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(var(--color), 1)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="proyect__icon icon-offset lucide lucide-smartphone size-4"
+                >
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="4" />
+                  <line x1="12" y1="18" x2="12.01" y2="18" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="rgba(var(--color), 1)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="proyect__icon icon-offset lucide lucide-monitor size-4"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              )}
+              {title}
+            </div>
+            {isNew && <span className="badge badge--new">Novedad</span>}
+            {isInConstruction && <span className="badge badge--wip">Desarrollo activo</span>}
           </h2>
         </header>
         <div className="proyect__content">
-          {isInConstruction && <span className="building">En desarrollo</span>}
           <span className="smoke">{summary}</span>
           <Chips technologies={tags} />
         </div>

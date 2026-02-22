@@ -7,7 +7,7 @@ images:
 summary: 'Calculadora iOS'
 draft: false
 isInConstruction: false
-isFeatured: true
+isFeatured: false
 tags:
   - iOS
   - Swift

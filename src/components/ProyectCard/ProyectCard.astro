@@ -10,7 +10,7 @@ type Props = {
 };
 
 const { proyect } = Astro.props;
-const { title, summary, isInConstruction, tags } = proyect.data;
+const { title, summary, isInConstruction, tags, isNew } = proyect.data;
 const tegnologiesTags = tags as Technology[];
 const isIOS = tags.map((tag) => tag.toLowerCase()).includes('ios');
 ---
@@ -19,18 +19,20 @@ const isIOS = tags.map((tag) => tag.toLowerCase()).includes('ios');
   <a class="proyect__link" href={`/info-proyects/${proyect.slug}`}>
     <header class="proyect__header">
       <h2 class="proyect__title" transition:name={`${title}-title`}>
-        {isIOS ? (
-          <Smartphone class="proyect__icon icon-offset" />
-        ) : (
-          <Monitor class="proyect__icon icon-offset" />
-        )}
-        {title}
-        
+        <div class="proyect__title-content">
+          {isIOS ? (
+            <Smartphone class="proyect__icon icon-offset" />
+          ) : (
+            <Monitor class="proyect__icon icon-offset" />
+          )}
+          {title}
+        </div>
+        {isNew && <span class="badge badge--new">Novedad</span>}
+        {isInConstruction && <span class="badge badge--wip">Desarrollo activo</span>}
         <!-- <ArrowShortDown class="proyect__icon proyect__arrow" /> -->
       </h2>
     </header>
     <div class="proyect__content">
-      {isInConstruction && <span class="building">En desarrollo</span>}
       <span class="smoke">{summary}</span>
 
       <Chips tegnologies={tegnologiesTags} />
@@ -85,14 +87,49 @@ const isIOS = tags.map((tag) => tag.toLowerCase()).includes('ios');
     font-size: clamp(1rem, 2vw, 1.2rem);
 
     display: flex;
-    align-items: flex-end;
-    gap: 0.3em;
+    align-items: center;
+    gap: 1rem;
     line-height: 0.75rem;
+  }
+  .proyect__title-content {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    transition:
+      color 0.3s ease-in,
+      border-color 0.3s ease-in;
+  }
+  .proyect:hover .proyect__title-content {
+    color: rgba(var(--color), 1);
+    border-color: rgba(var(--color), 1);
+  }
+  .proyect:hover .proyect__arrow {
+    transform: translate(0.4rem, -0.3rem);
+  }
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .badge--new {
+    background-color: rgba(var(--color), 0.15);
+    color: rgb(var(--color));
+    border: 1px solid rgba(var(--color), 0.3);
+  }
+  .badge--wip {
+    background-color: rgba(var(--color-button-accent), 0.15);
+    color: rgb(var(--color-button-accent));
+    border: 1px solid rgba(var(--color-button-accent), 0.3);
   }
   .proyect__content {
     display: flex;
     flex-direction: column;
-    row-gap: 0.4rem;
+    row-gap: 1rem;
   }
   .proyect__icon {
     width: 1rem;
