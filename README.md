@@ -45,9 +45,17 @@ Este proyecto está bajo la Licencia MIT. Si decides usar este código como refe
 
 Si tienes alguna propuesta o quieres conectar, no dudes en contactarme:
 
-- **Email:** cardenas97vga@gmail.com
-- **GitHub:** [0re0re0](https://github.com/0re0re0)
-- **LinkedIn:** [Javier Cárdenas](https://www.linkedin.com/in/javier-cardenas-perdomo/)
+<h3>
+Javier Cárdenas Perdomo
+<a href="mailto:cardenas97vga@gmail.com">
+  <img src="https://readmecodegen.vercel.app/api/social-icon?name=gmail&size=20"
+       style="vertical-align: middle; margin-left: 6px;" />
+</a>
+<a href="https://www.linkedin.com/in/javiercardenasperdomo97/">
+  <img src="https://readmecodegen.vercel.app/api/social-icon?name=linkedin&size=20"
+       style="vertical-align: middle; margin-left: 4px;" />
+</a>
+</h3>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=007AFF" />
 
