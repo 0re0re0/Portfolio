@@ -49,6 +49,6 @@ Si tienes alguna propuesta o quieres conectar, no dudes en contactarme:
 - **GitHub:** [0re0re0](https://github.com/0re0re0)
 - **LinkedIn:** [Javier Cárdenas](https://www.linkedin.com/in/javier-cardenas-perdomo/)
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=007AFF" />
 
 ¡Gracias por visitar mi portfolio! Espero que encuentres mi trabajo interesante.
