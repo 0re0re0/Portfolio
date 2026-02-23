@@ -4,29 +4,44 @@
 
 ¡Hola! Soy Javier, desarrollador iOS apasionado por crear experiencias móviles nativas en el ecosistema Apple.
 
-## Sobre el Portfolio
+<br>
+<p align="left">
+  <img src="https://capsule-render.vercel.app/api?type=soft&height=35&text=Sobre%20el%20Portfolio&color=007AFF&fontColor=ffffff&fontSize=20&padding=10" />
+</p>
 
 Este proyecto es una representación de mis habilidades y trayectoria en el desarrollo móvil con **Swift** y **SwiftUI**. Aquí encontrarás mis aplicaciones personales, experiencia profesional y el stack tecnológico que domino.<br>
 Esta versión del portfolio ha sido desarrollada con Astro para ofrecer un rendimiento óptimo y una experiencia de usuario fluida.
 
-## Stack Tecnológico
+<br>
+<p align="left">
+  <img src="https://capsule-render.vercel.app/api?type=soft&height=35&text=Stack%20Tecnologico&color=007AFF&fontColor=ffffff&fontSize=20&padding=10" />
+</p>
 
 - **iOS Development**: Swift, SwiftUI, UIKit, Combine, SwiftData, CoreData
 - **Arquitectura**: MVVM, Clean Architecture, Coordinator Pattern
 - **Herramientas**: Xcode, Firebase, Git, Figma
 
-## Tecnologías del Portfolio
+<br>
+<p align="left">
+  <img src="https://capsule-render.vercel.app/api?type=soft&height=35&text=Tecnologias%20del%20Portfolio&color=007AFF&fontColor=ffffff&fontSize=20&padding=10" />
+</p>
 
 - **Astro**
 - **React**
 - **TypeScript**
 - **CSS3**
 
-## Licencia
+<br>
+<p align="left">
+  <img src="https://capsule-render.vercel.app/api?type=soft&height=35&text=Licencia&color=007AFF&fontColor=ffffff&fontSize=20&padding=10" />
+</p>
 
 Este proyecto está bajo la Licencia MIT. Si decides usar este código como referencia, por favor, mencióname.
 
-## Contacto
+<br>
+<p align="left">
+  <img src="https://capsule-render.vercel.app/api?type=soft&height=35&text=Contacto&color=007AFF&fontColor=ffffff&fontSize=20&padding=10" />
+</p>
 
 Si tienes alguna propuesta o quieres conectar, no dudes en contactarme:
 
